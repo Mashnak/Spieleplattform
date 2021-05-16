@@ -1,5 +1,5 @@
 export interface iCARD {
-  id: number;
+  id?: number;
   value: number;
   color: string;
 }
