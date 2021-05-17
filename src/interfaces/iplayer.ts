@@ -1,6 +1,10 @@
-export interface iPLAYER {
+import {iCard} from './icard';
+
+export interface iPlayer {
   id?: number;
   name: string;
   color: string;
-  points: number;
+  score: number;
+  cards?: iCard[];
+  active: boolean;
 }

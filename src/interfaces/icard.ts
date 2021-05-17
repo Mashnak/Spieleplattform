@@ -1,5 +1,6 @@
-export interface iCARD {
+export interface iCard {
   id?: number;
   value: number;
-  color: string;
+  color?: string;
+  turned: boolean;
 }
