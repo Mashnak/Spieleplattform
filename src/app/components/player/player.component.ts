@@ -10,6 +10,7 @@ import { RulesOfTheGameService} from '../../services/rulesofthegame.service';
 })
 export class PlayerComponent implements OnInit {
 
+
   player_cards: iCard[]= [];
   constructor(private board: BoardComponent, private rules: RulesOfTheGameService) { }
 

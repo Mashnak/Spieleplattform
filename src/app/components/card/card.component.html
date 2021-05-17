@@ -1,1 +1,2 @@
-<p>card works!</p>
+<div [ngStyle]="{background:card.color}" *ngIf="card.turned">{{card.value}}</div>
+<div [ngStyle]="{background:'green'}" *ngIf="!card.turned"></div>
