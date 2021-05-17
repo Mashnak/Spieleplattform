@@ -53,6 +53,20 @@ export class RulesOfTheGameService {
     return valueOfAllCards;
   }
 
+  /**
+   *
+   * @param cards
+   */
+    // TODO: modify cards array so that it cuts out the right column and returns modified array
+  deleteRowOfCards: (cards: iCard[]) => iCard[] = (cards: iCard[]) => {
+    if (this.checkColumnForMatchingCards(cards) === -1) {
+      return cards;
+    }
+    if (this.checkColumnForMatchingCards(cards) === 0) {
+      return cards;
+    }
+    return cards;
+  }
 
   /**
    *
@@ -61,7 +75,7 @@ export class RulesOfTheGameService {
   checkColumnForMatchingCards: (cards: iCard[]) => number = (cards: iCard[]) => {
     let columns: number = cards.length / 3;
     for (let i = 0; i < columns; i++) {
-      if (cards[i].value == cards[i+columns].value && cards[i].value == cards[2*i+columns].value && cards[i+columns].value == cards[2*i+columns].value) {
+      if (cards[i].value === cards[i+columns].value && cards[i].value === cards[2*i+columns].value && cards[i+columns].value === cards[2*i+columns].value) {
         return i;
       }
     }
