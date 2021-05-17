@@ -20,8 +20,6 @@ export class PlayerComponent implements OnInit {
         this.board.cards.forEach( (item, index) => {
           if(index === random_card) this.board.cards.splice(index,1);
         });
-
-      // TODO: Delete the 12 cards that the player got from the pile of 150 game cards
     }
     console.log('12 Player cards', this.player_cards);
     console.log('All cards after the player picked 12', this.board.cards);
