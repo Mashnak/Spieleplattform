@@ -52,4 +52,19 @@ export class RulesOfTheGameService {
     }
     return valueOfAllCards;
   }
+
+
+  /**
+   *
+   * @param cards
+   */
+  checkColumnForMatchingCards: (cards: iCard[]) => number = (cards: iCard[]) => {
+    let columns: number = cards.length / 3;
+    for (let i = 0; i < columns; i++) {
+      if (cards[i].value == cards[i+columns].value && cards[i].value == cards[2*i+columns].value && cards[i+columns].value == cards[2*i+columns].value) {
+        return i;
+      }
+    }
+    return -1;
+  }
 }
