@@ -1,1 +1,17 @@
-<p>board works!</p>
+<div *ngFor="let player of players; first as isFirst" [ngStyle]="{color: player.color}" class="scoreboard">
+  <table>
+    <thead *ngIf="isFirst" [ngStyle]="{color: 'black'}">
+    <tr>
+      <th>Spierlname</th>
+      <th>Spielerpunkte</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><span *ngIf="player.active" class="arrow"></span>{{player.name}}</td>
+      <td>{{player.score}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-player></app-player>
