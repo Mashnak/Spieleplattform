@@ -17,6 +17,10 @@ export class PlayerComponent implements OnInit {
     for(let i = 0; i < 12; i++) {
       let random_card: number = Math.floor(Math.random() * this.board.cards.length);
       this.player_cards.push(this.board.cards[random_card]);
+        this.board.cards.forEach( (item, index) => {
+          if(index === random_card) this.board.cards.splice(index,1);
+        });
+
       // TODO: Delete the 12 cards that the player got from the pile of 150 game cards
     }
     console.log('12 Player cards', this.player_cards);
