@@ -8,6 +8,7 @@ import { BoardComponent } from './components/board/board.component';
 import { PlayerComponent } from './components/player/player.component';
 import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
 import { GameComponent } from './components/game/game.component';
+import { CardpileComponent } from './components/cardpile/cardpile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GameComponent } from './components/game/game.component';
     BoardComponent,
     PlayerComponent,
     ScoreboardComponent,
-    GameComponent
+    GameComponent,
+    CardpileComponent
   ],
   imports: [
     BrowserModule,

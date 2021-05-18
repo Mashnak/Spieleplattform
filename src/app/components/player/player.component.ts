@@ -23,7 +23,6 @@ export class PlayerComponent implements OnInit {
       this.board.cards.forEach((item, index) => {
         if (index === random_card) this.board.cards.splice(index, 1);
       });
-      this.player_cards[i].turned = false;
     }
     console.log('12 Player cards', this.player_cards);
     console.log('All cards after the player picked 12', this.board.cards);

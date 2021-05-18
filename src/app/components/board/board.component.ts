@@ -20,17 +20,17 @@ export class BoardComponent implements OnInit {
   ngOnInit(): void {
     for (let i = 0; i < 150; i++) {
       if (i < 5) {
-        this.cards.push({id: i, value: -2, color: 'dodgerblue', turned: true});
+        this.cards.push({id: i, value: -2, color: 'dodgerblue', turned: false});
       } else if (i < 15) {
-        this.cards.push({id: i, value: -1, color: 'dodgerblue', turned: true});
+        this.cards.push({id: i, value: -1, color: 'dodgerblue', turned: false});
       } else if (i < 30) {
-        this.cards.push({id: i, value: 0, color: 'aqua', turned: true});
+        this.cards.push({id: i, value: 0, color: 'aqua', turned: false});
       } else {
         this.cards.push({
           id: i,
           value: Math.floor((i - 20) / 10),
           color: ((Math.floor((i - 20) / 10)) < 5 ? 'greenyellow' : (Math.floor((i - 20) / 10)) < 9 ? 'yellow' : 'red'),
-          turned: true
+          turned: false
         });
       }
     }
