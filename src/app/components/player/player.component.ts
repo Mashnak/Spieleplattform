@@ -29,5 +29,6 @@ export class PlayerComponent implements OnInit {
 
   onTurn(card:iCard) {
     card.turned = true;
+    console.log('Card values', this.rules.checkCardValues(this.player_cards));
   }
 }
