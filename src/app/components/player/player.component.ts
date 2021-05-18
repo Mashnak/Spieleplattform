@@ -26,4 +26,8 @@ export class PlayerComponent implements OnInit {
     console.log('All cards after the player picked 12', this.board.cards);
     console.log('Card values', this.rules.checkCardValues(this.player_cards));
   }
+
+  onTurn(card:iCard) {
+    card.turned = true;
+  }
 }

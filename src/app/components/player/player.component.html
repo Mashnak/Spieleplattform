@@ -1,1 +1,2 @@
-<app-card *ngFor="let card of player_cards" [card]="card"></app-card>
+<app-card *ngFor="let card of player_cards" [card]="card"
+(onTurnCard)="onTurn(card)"></app-card>
