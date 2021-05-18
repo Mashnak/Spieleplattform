@@ -1,0 +1,26 @@
+.gamecomponent {
+  background-color: dodgerblue;
+  height: 100%;
+  width:100%;
+
+}
+
+.scoreboardcomponent {
+  background-color: orange;
+}
+
+.boardcomponent {
+  background-color: red;
+}
+
+.pilecomponent {
+  background-color: darkgrey;
+}
+
+.playercomponent {
+  background-color: yellow;
+}
+
+.cardcomponent {
+  background-color: black;
+}
