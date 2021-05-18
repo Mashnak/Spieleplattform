@@ -46,16 +46,34 @@ export class BoardComponent implements OnInit {
   ngOnInit(): void {
     for (let i = 0; i < 150; i++) {
       if (i < 5) {
-        this.cards.push({id:i, value: -2, color:'dodgerblue', turned: false});
-      }else if (i < 15) {
-        this.cards.push({id:i, value: -1,color:'dodgerblue', turned: false});
+        this.cards.push({id: i, value: -2, color: 'dodgerblue', turned: true});
+      } else if (i < 15) {
+        this.cards.push({id: i, value: -1, color: 'dodgerblue', turned: true});
       } else if (i < 30) {
-        this.cards.push({id:i, value: 0, color:'aqua', turned: false});
+        this.cards.push({id: i, value: 0, color: 'aqua', turned: true});
       } else {
-        this.cards.push({id:i, value: Math.floor((i- 20) /10),
-          color:((Math.floor((i- 20) /10))<5?'greenyellow':(Math.floor((i- 20) /10))<9?'yellow':'red'), turned: false});
+        this.cards.push({
+          id: i,
+          value: Math.floor((i - 20) / 10),
+          color: ((Math.floor((i - 20) / 10)) < 5 ? 'greenyellow' : (Math.floor((i - 20) / 10)) < 9 ? 'yellow' : 'red'),
+          turned: true
+        });
       }
     }
+    this.shuffleArray(this.cards);
     console.log('Initialization of the card deck', this.cards);
+  }
+
+  /**
+   * Randomize array in-place using Durstenfeld shuffle algorithm
+   * @param array
+   */
+   shuffleArray(array: iCard[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      let temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
   }
 }

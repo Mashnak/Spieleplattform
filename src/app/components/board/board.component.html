@@ -15,3 +15,8 @@
   </table>
 </div>
 <app-player></app-player>
+<div *ngFor="let card of cards; let isLast=last">
+  <div *ngIf="isLast">
+    <app-card [card]="card"></app-card>
+  </div>
+</div>
