@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { BoardComponent } from './components/board/board.component';
 import { PlayerComponent } from './components/player/player.component';
+import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     BoardComponent,
-    PlayerComponent
+    PlayerComponent,
+    ScoreboardComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

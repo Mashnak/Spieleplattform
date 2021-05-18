@@ -1,3 +1,9 @@
 * {
   background-image: url("src/assets/43001480-gruen-.jpg");
 }
+
+.game {
+  width: 100px;
+  height: 100px;
+  background-color: dodgerblue;
+}
