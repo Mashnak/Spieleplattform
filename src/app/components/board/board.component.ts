@@ -35,7 +35,6 @@ export class BoardComponent implements OnInit {
       }
     }
     this.shuffleArray(this.cards);
-    console.log('Initialization of the card deck', this.cards);
   }
 
   /**

@@ -25,8 +25,8 @@ export class RulesOfTheGameService {
   }
 
   /**
-   * test
-   * @param players test
+   *
+   * @param players
    */
   // TODO: Add functionality to return more than 1 player as the winning player. Maybe 2 or more players have the same minimum score
   checkWinningPlayer: (players: iPlayer[]) => iPlayer = (players: iPlayer[]) => {
@@ -57,14 +57,16 @@ export class RulesOfTheGameService {
    *
    * @param cards
    */
-    // TODO: modify cards array so that it cuts out the right column and returns modified array
   deleteRowOfCards: (cards: iCard[]) => iCard[] = (cards: iCard[]) => {
-    if (this.checkColumnForMatchingCards(cards) === -1) {
+    let matching_row: number = this.checkColumnForMatchingCards(cards);
+    console.log('matching_row', matching_row);
+    if(matching_row === -1) {
       return cards;
     }
-    if (this.checkColumnForMatchingCards(cards) === 0) {
-      return cards;
+    for (let i = 0; i < 3; i++) {
+      cards.splice(matching_row + i*3, 1);
     }
+    console.log(cards);
     return cards;
   }
 
@@ -72,10 +74,12 @@ export class RulesOfTheGameService {
    *
    * @param cards
    */
-  checkColumnForMatchingCards: (cards: iCard[]) => number = (cards: iCard[]) => {
+  private checkColumnForMatchingCards: (cards: iCard[]) => number = (cards: iCard[]) => {
     let columns: number = cards.length / 3;
+    console.log('column', columns);
     for (let i = 0; i < columns; i++) {
-      if (cards[i].value === cards[i+columns].value && cards[i].value === cards[2*i+columns].value && cards[i+columns].value === cards[2*i+columns].value) {
+      console.log(cards[i].value, cards[i+columns].value, cards[i+2*columns].value);
+      if (cards[i].value === cards[i+columns].value && cards[i].value === cards[i+2*columns].value && cards[i+columns].value === cards[i+2*columns].value) {
         return i;
       }
     }

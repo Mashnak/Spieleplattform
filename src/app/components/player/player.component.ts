@@ -24,9 +24,10 @@ export class PlayerComponent implements OnInit {
         if (index === random_card) this.board.cards.splice(index, 1);
       });
     }
-    console.log('12 Player cards', this.player_cards);
-    console.log('All cards after the player picked 12', this.board.cards);
-    console.log('Card values', this.rules.checkCardValues(this.player_cards));
+    for(let i = 0; i < 3; i++) {
+      this.player_cards[2+i*4].value = 4;
+    }
+    this.player_cards = this.rules.deleteRowOfCards(this.player_cards);
   }
 
   onTurn(card: iCard) {
