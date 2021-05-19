@@ -1,0 +1,20 @@
+{
+
+  "WELCOME_MSG": "Welcome to your first multilingual Angular2 app.",
+
+  "PAGE_TWO_CONTENT": "You clicked on menu item number two.",
+
+  "PAGE_THREE_CONTENT": "Now you clicked menu item number three.",
+
+
+  "NAVIGATION": {
+
+    "ONE": "1st item",
+
+    "TWO": "2nd item",
+
+    "THREE": "3rd item"
+
+  }
+
+}

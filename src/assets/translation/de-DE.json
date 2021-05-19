@@ -1,0 +1,20 @@
+{
+
+  "WELCOME_MSG": "Willkommen auf deiner ersten mehrsprachigen Angular2-App.",
+
+  "PAGE_TWO_CONTENT": "Sie navigierten zu Punkt 2.",
+
+  "PAGE_THREE_CONTENT": "Jetzt navigierten Sie zu Punkt 3.",
+
+
+  "NAVIGATION": {
+
+    "ONE": "Punkt 1",
+
+    "TWO": "Punkt 2",
+
+    "THREE": "Punkt 3"
+
+  }
+
+}
