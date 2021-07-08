@@ -10,6 +10,8 @@ import {iCard} from '../../../interfaces/icard';
 export class BoardComponent implements OnInit {
 
   cards: iCard[] = [];
+  poppedCard!: iCard | undefined;
+
   constructor(private rules: RulesOfTheGameService) {
 
   }
@@ -41,7 +43,7 @@ export class BoardComponent implements OnInit {
    * Randomize array in-place using Durstenfeld shuffle algorithm
    * @param array
    */
-   shuffleArray(array: iCard[]) {
+  shuffleArray(array: iCard[]) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       let temp = array[i];
@@ -50,7 +52,10 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  popLastCard() {
-     console.log(this.cards.pop(), this.cards.length)
+  popLastCard(card: iCard) {
+  this.cards.pop();
+    card.turned = true;
+    this.poppedCard = card;
+    console.log(this.poppedCard);
   }
 }

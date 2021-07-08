@@ -13,8 +13,8 @@ export class CardpileComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onClick = () => {
-    this.onClickCard.emit();
+  onClick = (card: iCard) => {
+    this.onClickCard.emit(card);
   }
 
 }
