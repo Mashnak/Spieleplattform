@@ -63,6 +63,7 @@ export class RulesOfTheGameService {
     if(matching_row === -1) {
       return cards;
     }
+    if(cards[matching_row].turned && cards[matching_row+cards.length/3].turned && cards[matching_row+cards.length*2/3].turned)
     for (let i = 0; i < 3; i++) {
       cards.splice(matching_row + i*3, 1);
     }
