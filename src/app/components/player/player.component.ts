@@ -27,11 +27,12 @@ export class PlayerComponent implements OnInit {
     for(let i = 0; i < 3; i++) {
       this.player_cards[2+i*4].value = 4;
     }
-    this.player_cards = this.rules.deleteRowOfCards(this.player_cards);
+    this.player_cards = this.rules.deleteColumnOfCards(this.player_cards);
   }
 
   onTurn(card: iCard) {
     card.turned = true;
     console.log('Card values', this.rules.checkCardValues(this.player_cards));
+    this.rules.deleteColumnOfCards(this.player_cards);
   }
 }
