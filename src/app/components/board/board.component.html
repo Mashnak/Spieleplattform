@@ -1,6 +1,6 @@
 <app-player></app-player>
 <div *ngFor="let card of cards; let isLast=last">
   <div *ngIf="isLast">
-    <app-card [card]="card"></app-card>
+    <app-cardpile [card]="card" (onClickCard)="popLastCard()"></app-cardpile>
   </div>
 </div>

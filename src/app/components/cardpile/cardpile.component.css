@@ -1,0 +1,20 @@
+.card {
+  width: 132px;
+  height: 208px;
+  border: black 3px solid;
+  border-radius: 10px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 50px;
+
+}
+
+.not_turned {
+  background: url("src/assets/skyjo.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

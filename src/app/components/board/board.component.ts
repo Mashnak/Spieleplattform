@@ -49,4 +49,8 @@ export class BoardComponent implements OnInit {
       array[j] = temp;
     }
   }
+
+  popLastCard() {
+     console.log(this.cards.pop(), this.cards.length)
+  }
 }

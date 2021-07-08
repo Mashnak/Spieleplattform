@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {iCard} from '../../../interfaces/icard';
 
 @Component({
   selector: 'app-cardpile',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cardpile.component.css']
 })
 export class CardpileComponent implements OnInit {
-
+  @Input() card!: iCard;
+  @Output() onClickCard: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onClick = () => {
+    this.onClickCard.emit();
   }
 
 }

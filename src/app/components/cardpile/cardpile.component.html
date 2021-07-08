@@ -1,1 +1,4 @@
-<p>cardpile works!</p>
+<div [ngClass]="{not_turned: !card.turned}" class="card" [ngStyle]="{'background-color':card.turned?card.color:''}"
+     (dblclick)="onClick()">
+  <span *ngIf="card.turned">{{card.value}}</span>
+</div>

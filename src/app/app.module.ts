@@ -18,7 +18,7 @@ import { CardpileComponent } from './components/cardpile/cardpile.component';
     PlayerComponent,
     ScoreboardComponent,
     GameComponent,
-    CardpileComponent
+    CardpileComponent,
   ],
   imports: [
     BrowserModule,
