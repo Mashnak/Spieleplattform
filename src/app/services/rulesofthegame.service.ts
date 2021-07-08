@@ -57,7 +57,7 @@ export class RulesOfTheGameService {
    *
    * @param cards
    */
-  deleteRowOfCards: (cards: iCard[]) => iCard[] = (cards: iCard[]) => {
+  deleteColumnOfCards: (cards: iCard[]) => iCard[] = (cards: iCard[]) => {
     let matching_row: number = this.checkColumnForMatchingCards(cards);
     console.log('matching_row', matching_row);
     if(matching_row === -1) {
