@@ -30,8 +30,8 @@ export class PlayerComponent implements OnInit {
     this.player_cards = this.rules.deleteColumnOfCards(this.player_cards);
   }
 
-  onTurn(card: iCard) {
-    card.turned = true;
+  onClick(card: iCard) {
+    card.clicked = !card.clicked;
     console.log('Card values', this.rules.checkCardValues(this.player_cards));
     this.rules.deleteColumnOfCards(this.player_cards);
   }

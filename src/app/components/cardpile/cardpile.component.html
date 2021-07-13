@@ -1,4 +1,4 @@
 <div [ngClass]="{not_turned: !card.turned}" class="card" [ngStyle]="{'background-color':card.turned?card.color:''}"
-     (dblclick)="onClick(card)">
+     (click)="onClick(card)">
   <span *ngIf="card.turned">{{card.value}}</span>
 </div>

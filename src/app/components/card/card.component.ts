@@ -8,14 +8,14 @@ import { iCard } from '../../../interfaces/icard';
 })
 export class CardComponent implements OnInit {
   @Input() card!: iCard;
-  @Output() onTurnCard: EventEmitter<iCard> = new EventEmitter();
+  @Output() onClickCard: EventEmitter<iCard> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit = (): void => {
   };
 
-  onTurn = (card: iCard) => {
-    this.onTurnCard.emit(card);
+  onClick = (card: iCard) => {
+    this.onClickCard.emit(card);
   };
 }

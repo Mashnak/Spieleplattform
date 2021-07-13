@@ -3,4 +3,5 @@ export interface iCard {
   value: number;
   color: string;
   turned: boolean;
+  clicked: boolean;
 }

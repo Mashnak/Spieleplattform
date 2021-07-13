@@ -18,3 +18,12 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+.clicked {
+  border: red solid 3px;
+}
+
+.button {
+  border: darkgrey 1px solid;
+  border-radius: 5px;
+}
