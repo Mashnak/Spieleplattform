@@ -59,7 +59,7 @@ export class RulesOfTheGameService {
    */
   deleteColumnOfCards: (cards: iCard[]) => iCard[] = (cards: iCard[]) => {
     let matching_row: number = this.checkColumnForMatchingCards(cards);
-    console.log('matching_row', matching_row);
+/*    console.log('matching_row', matching_row);*/
     if(matching_row === -1) {
       return cards;
     }
@@ -67,8 +67,17 @@ export class RulesOfTheGameService {
     for (let i = 0; i < 3; i++) {
       cards.splice(matching_row + i*3, 1);
     }
-    console.log(cards);
+/*    console.log(cards);*/
     return cards;
+  }
+
+  checkEndOfRound: (cards:iCard[]) => boolean = (cards: iCard[]) => {
+    for (let i = 0; i < cards.length; i++) {
+      if (!cards[i].turned) {
+        return false;
+      }
+    }
+    return true;
   }
 
   /**
@@ -77,9 +86,9 @@ export class RulesOfTheGameService {
    */
   private checkColumnForMatchingCards: (cards: iCard[]) => number = (cards: iCard[]) => {
     let columns: number = cards.length / 3;
-    console.log('column', columns);
+/*    console.log('column', columns);*/
     for (let i = 0; i < columns; i++) {
-      console.log(cards[i].value, cards[i+columns].value, cards[i+2*columns].value);
+/*      console.log(cards[i].value, cards[i+columns].value, cards[i+2*columns].value);*/
       if (cards[i].value === cards[i+columns].value && cards[i].value === cards[i+2*columns].value && cards[i+columns].value === cards[i+2*columns].value) {
         return i;
       }

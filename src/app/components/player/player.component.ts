@@ -32,11 +32,12 @@ export class PlayerComponent implements OnInit {
 
   onClick(card: iCard) {
     card.clicked = !card.clicked;
-    console.log('Card values', this.rules.checkCardValues(this.player_cards));
+/*    console.log('Card values', this.rules.checkCardValues(this.player_cards));*/
     this.rules.deleteColumnOfCards(this.player_cards);
   }
 
   onTurn(card: iCard) {
       card.turned = true;
+      console.log(this.rules.checkEndOfRound(this.player_cards));
   }
 }

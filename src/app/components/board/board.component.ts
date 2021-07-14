@@ -57,6 +57,6 @@ export class BoardComponent implements OnInit {
   this.cards.pop();
     card.turned = true;
     this.poppedCard = card;
-    console.log(this.poppedCard);
+/*    console.log(this.poppedCard);*/
   }
 }
