@@ -1,5 +1,6 @@
 <div [ngClass]="{not_turned: !card.turned, clicked: card.clicked}" class="card" [ngStyle]="{'background-color':card.turned?card.color:''}"
 (click)="onClick(card)">
-  <span *ngIf="card.turned">{{card.value}}</span>
-  <button *ngIf="card.clicked" class="button">Turn Card</button>
+  <div *ngIf="card.turned">{{card.value}}</div>
+  <button *ngIf="card.clicked && !card.turned" class="button" (click)="onTurn(card)">Turn Card</button>
+  <button *ngIf="card.clicked && card.turned" class="button" (click)="onTurn(card)">Switch Card</button>
 </div>

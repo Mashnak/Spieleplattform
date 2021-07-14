@@ -1,2 +1,2 @@
 <app-card *ngFor="let card of player_cards" [card]="card"
-          (onClickCard)="onClick(card)"></app-card>
+          (onClickCard)="onClick(card)" (onTurnCard)="onTurn(card)"></app-card>
